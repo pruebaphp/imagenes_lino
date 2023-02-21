@@ -1,0 +1,165 @@
+body{
+    background-color: #12263c
+}
+
+.tituloPropietario{
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+    font-family: 'Arvo', serif;
+    
+}
+
+.nueva_imagen{
+    background-color: rgb(209, 61, 66);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 50px;
+    border: none;
+}
+
+.nueva_imagen:hover{
+    cursor: pointer;
+    background-color: rgb(216, 87, 91);
+}
+
+.contenedor_galeria{
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 50px;
+    row-gap: 50px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    
+}
+.card_imagen{
+    
+    padding: 15px 15px;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px 0;
+    box-shadow: 0px 3px 20px 8px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 0px 3px 20px 8px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 3px 20px 8px rgba(0,0,0,0.45);
+    border-radius: 15px;
+    
+}
+
+.card_imagen_img{
+    width: 100%;
+    height: 400px;
+   
+    border-radius: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.card_imagen_titulo{
+    text-transform: uppercase;
+    font-family: 'Staatliches', cursive;
+    font-size: 25px;
+    margin: 0;
+    margin-top: 8px;
+   
+}
+
+.card_imagen_descri{
+    text-align: justify;
+    margin-top: 0;
+    padding: 0 15px;
+    line-height: 20px;
+}
+
+.btnAction{
+    width: 100%;
+    font-family: 'Staatliches', cursive;
+   /* line-height: 15px;*/
+   letter-spacing: 2px;
+   border: none;
+   font-size: 18px;
+   padding: 15px 0;
+   border-radius: 10px;
+}
+
+.btnAction:hover{
+    cursor: pointer;
+}
+
+.enlace_eliminar{
+    width: 100%;
+}
+
+.card_imagen_ver{
+    background-color: rgb(236, 241, 146);
+    color: rgb(146, 146, 26);
+}
+
+.card_imagen_editar{
+    background-color: #2363a8;
+    color: rgb(58, 58, 163);
+    /*background-color: #12263c;*/
+    color: white;
+}
+.card_imagen_eliminar{
+    background-color: rgb(202, 94, 94);
+    background-color: #c95454;
+    color: rgb(218, 84, 84);
+    color: white;
+}
+
+.paginacion{
+    
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 10px;
+    
+
+}
+.enlacePagina{
+    background-color: #12263c;
+    border: solid 2px white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+}
+
+.paginacion a:hover{
+    background-color: #0b3f77;
+}
+
+.pie{
+    margin-top: 80px;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'DM Sans', sans-serif;
+   
+}
+
+.aplicarHover{
+    background-color: #0b3f77;
+}
+
+@media (max-width: 1400px) {
+    .contenedor_galeria{
+        grid-template-columns: repeat(2,1fr);
+    }
+}

@@ -1,0 +1,26 @@
+extends ../layout/index
+
+block contenido 
+        div(class="div-mayor")
+            h1 Mis
+                span Imágenes
+            h2= pagina 
+            div(class="div-central")
+                
+                if errores
+                    each error in errores 
+                        p(class="parrafo-error")= error.msg
+                form(method="POST" action="/registro")
+                    div(class="div-hijo")
+                        label(class="label-hijo") Tu nombre 
+                        input(type="text" class="datos-hijo" name="nombre" placeholder="Ingresa tu nombre" value= datos ? datos.nombre : '')
+                        label(class="label-hijo") Tu email
+                        input(type="text" class="datos-hijo" name="email" placeholder="Ingresa tu email" value= datos ? datos.email : '')
+                        label(class="label-hijo") Tu contraseña
+                        input(type="password" class="datos-hijo" name="password" placeholder="Ingresa tu password")
+                        label(class="label-hijo") Repite tu contraseña
+                        input(type="password" class="datos-hijo" name="repeat_password" placeholder="Repite tu password")
+                        input(type="submit" class="btn-hijo" value="Crear cuenta")
+                        div(class="div-enlaces") 
+                            a(href="/login") ¿Ya tienes una cuenta? Inicia Sesión
+                            a(href="/olvido-password")  Olvidé mi Password

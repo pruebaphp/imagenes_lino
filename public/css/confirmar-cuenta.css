@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.div-mayor{
+    
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.div-mayor h1,h2{
+    text-align: center;
+    color: black;
+
+}
+
+.div-mayor h2{
+    font-size: 30px;
+    
+
+}
+.div-mayor h1{
+
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.div-mayor span{
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.mensaje{
+    margin-top: 60px;
+    background-color: #57DC5F;
+    color: white;
+    font-size: 20px;
+    padding:0 20px;
+    border-radius: 10px;
+    font-weight: bold;
+
+}
+
+.mensaje2{
+    margin-top: 60px;
+    background-color: #f1b363;
+    color: white;
+    font-size: 20px;
+    padding:0 20px;
+    border-radius: 10px;
+    font-weight: bold;
+
+}

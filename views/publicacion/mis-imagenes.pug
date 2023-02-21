@@ -1,0 +1,49 @@
+extends ../layout/index-header
+
+block contenido
+    div 
+        h1.tituloPropietario= "Imágenes de "+nombreUsuario
+        a(href="/crear-imagen") 
+            button(class="nueva_imagen") Agregar imagen
+        div(class="contenedor_galeria containerCards")
+
+            if publicaciones
+                each publicacion in publicaciones
+                    div(class="card_imagen")
+                        img(class="card_imagen_img" src=`/uploads/${publicacion.imagen}`, alt=`Imagen de ${publicacion.imagen}`)
+                        p.card_imagen_titulo= publicacion.titulo
+                        p.card_imagen_descri= publicacion.descripcion
+                        //- button.card_imagen_ver.btnAction Ver información 
+                        a(href=`/editar-publicacion/${publicacion.id}` class="enlace_eliminar")
+                            button.card_imagen_editar.btnAction Editar
+                        a(href=`/eliminar-imagen/${publicacion.id}` class="enlace_eliminar") 
+                            button.card_imagen_eliminar.btnAction Eliminar
+            
+            //- div(class="card_imagen")
+            //-     img(class="card_imagen_img" src="/img/prueba2.jpg", alt="hola")
+            //-     p.card_imagen_titulo El arte rupestre 
+            //-     p.card_imagen_descri It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            //-     //- button.card_imagen_ver.btnAction Ver información 
+            //-     button.card_imagen_editar.btnAction Editar
+            //-     button.card_imagen_eliminar.btnAction Eliminar
+
+            //- div(class="card_imagen")
+            //-     img(class="card_imagen_img" src="/img/prueba.jpg", alt="hola")
+            //-     p.card_imagen_titulo El arte rupestre 
+            //-     p.card_imagen_descri It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                
+            //-     //- button.card_imagen_ver.btnAction Ver información 
+            //-     button.card_imagen_editar.btnAction Editar
+            //-     button.card_imagen_eliminar.btnAction Eliminar
+
+        div.paginacion
+            - var i = 1
+                while (i<= paginas)
+                    a(href=`/mis-imagenes?pagina=${i}` class=`enlacePagina ${paginaActual==i ? 'aplicarHover' : 'noEsigual'}`) #{i++}
+                
+            
+        footer(class="pie")  
+                p MisImágenes - Todos los derechos reservados - 2023 
+
+block scripts 
+    //- script(src="/js/cargarCards.js") 

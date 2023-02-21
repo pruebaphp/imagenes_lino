@@ -1,0 +1,40 @@
+{
+  "name": "bn_raices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js",
+    "js": "webpack --watch",
+    "db:refresh": "node ./seed/seeder.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "dropzone": "^5.9.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.15.0",
+    "form-data": "^4.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "mailgun-js": "^0.22.0",
+    "mailgun.js": "^8.0.6",
+    "mailtrap": "^3.0.1",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.1.2",
+    "nodemailer": "^6.9.1",
+    "pug": "^3.0.2",
+    "sequelize": "^6.28.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

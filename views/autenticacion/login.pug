@@ -1,0 +1,22 @@
+extends ../layout/index
+
+block contenido 
+        div(class="div-mayor")
+            h1 Mis
+                span Imágenes
+            h2= pagina 
+            div(class="div-central")
+                
+                if errores
+                    each error in errores 
+                        p(class="parrafo-error")= error.msg
+                form(method="POST")
+                    div(class="div-hijo")
+                        label(class="label-hijo") Tu email
+                        input(type="text" class="datos-hijo" name="email" placeholder="El email es: pruebaphpcode@gmail.com" value= datos ? datos.email : '')
+                        label(class="label-hijo") Tu contraseña
+                        input(type="password" class="datos-hijo" name="password" placeholder="La contraseña es: alfonso")
+                        input(type="submit" class="btn-hijo" value="Iniciar sesion")
+                        div(class="div-enlaces") 
+                            a(href="/registro") ¿No tienes una cuenta? Registrate
+                            a(href="/olvido-password")  Olvidé mi Password

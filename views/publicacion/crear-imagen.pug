@@ -1,0 +1,43 @@
+extends ../layout/index-header
+
+
+
+block contenido 
+    div.div-mayor
+        h1 Mis
+            span Imágenes
+        h2= pagina
+        div.div_hijo_0
+            if errores
+                each error in errores
+                    p= error.msg
+
+        <form action="/crear-imagen" method="POST" enctype="multipart/form-data">
+            div.contenedor_hijo
+                label(for="titulo") Título 
+                input(type="text" name="titulo" class="input_titulo" placeholder="Ingresa el título" value= datos ? datos.titulo : '')
+                label(for="") Descripción 
+                textarea(name="descripcion", class="input_descripcion" cols="30", rows="5" placeholder="Ingresa una descripción")= datos ? datos.descripcion : ''
+
+                div.contenedor_2div_1
+                    label(for="") Selecciona una categoría
+                    select(name="categoria" class="input_categoria") 
+                        option(value="" selected disabled) - Seleccione -  
+                        option(value="1" selected= datos ? datos.categoria=='1' ? true : false : false) Vida 
+                        option(value="2" selected= datos ? datos.categoria=='2' ? true : false : false ) Aleatorio
+                div.contenedor_2div_2
+                    label(for="") Selecciona una imagen 
+                    label(for="archivo" class=`labelArchivo` type="file")= datos ? datos.imagen ? 'Puedes seleccionar otra imagen o quedarte con la actual.' : 'Elige una imagen' : 'Elige una imagen' 
+                    input(id="archivo" name="archivo" class="archivo" type="file")
+                    //- input(type="hidden" name="rutaImagenToken" value= imagen ? imagen.filename : '')
+
+                        
+                input(type="submit" value='Crear publicación' class="btnAgregar") 
+        
+    footer(class="pie")  
+        p MisImágenes - Todos los derechos reservados - 2023 
+
+
+block scripts 
+    script(src="/js/asignarNombreRuta.js") 
+            

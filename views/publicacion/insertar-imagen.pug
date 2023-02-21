@@ -1,0 +1,17 @@
+extends ../layout/index-header
+
+block styles 
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.css")
+
+
+block contenido
+    div.padre-div
+        form(id="imagen" class="dropzone" method="POST" action="/insertar-imagen")
+    
+
+
+block scripts
+
+    script(src="/js/agregarImagen.js")
+
+

@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.padre{
+    background-color: white;
+    padding: 20px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hijo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+p{
+    text-align: center;
+    color: black;
+}
+
+.hijo_vinculo{
+    color: white;
+    font-size: 18px;
+    
+}
+
+.vinculo-sesion{
+    background-color: rgb(234, 62, 67);
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.vinculo-sesion:hover{
+    background-color:  rgb(235, 82, 87);
+}
+
+.vinculo-inicio{
+    color: black;
+    font-weight: 600;
+   
+}
+
+.vinculo-inicio:hover{
+    border-bottom: 2px solid rgb(127, 127, 127);
+}
+
+.frase-empresa{
+    font-size: 25px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    
+}
+
+.frase-empresa_2{
+    font-weight: normal;
+    text-transform: none;
+}
