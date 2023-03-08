@@ -3,10 +3,10 @@ import sgMail from '@sendgrid/mail'
 import Mailgun from 'mailgun.js'
 import formData from "form-data";
 
+sgMail.setApiKey('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');
 
-
-const enviarEmailRegistro= (token)=>{
-    var transport = nodemailer.createTransport({
+const enviarEmailRegistro= async (token)=>{
+    /*var transport = nodemailer.createTransport({
         host: "smtp.mailtrap.io",
         port: 2525,
         auth: {
@@ -30,7 +30,7 @@ const enviarEmailRegistro= (token)=>{
         console.log('Email sent: ' + info.response);
       });
       
-    
+    */
 
 /*      sgMail.setApiKey(API_KEY)
 
@@ -62,11 +62,30 @@ const enviarEmailRegistro= (token)=>{
           })
           .then(msg => console.log(msg)) // logs response data
           .catch(err => console.log(err)); // logs any error`;
-
+          
 */
 
 
+          try {
+            await sgMail.send({
+              to:'1923010051@untels.edu.pe',
+              from:'contrerasgomezalfonso@gmail.com',
+              subject: 'NodeJs Says Hello!',
+              html: `<a href="${process.env.BACKEND_URL}/confirmar-cuenta/${token}">Recuperar cuenta</a>`,
+            });
+          } catch (error) {
+
+            console.log(error);
+
+            if(error.response){
+              console.log(error.response.body);
+            }
+            
+          }
+
+
 };
+
 
 
 export {
